@@ -1,0 +1,20 @@
+{
+  "name": "bemclassname",
+  "version": "1.0.0",
+  "description": "Creation of HTML/CSS classes for BEM",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "class",
+    "className",
+    "classes",
+    "classNames",
+    "BEM"
+  ],
+  "author": "Kuznetsov Leonid",
+  "license": "ISC"
+}
