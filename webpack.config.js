@@ -18,12 +18,7 @@ const plugins = [
 const productPlugins = [
 	new webpack.optimize.UglifyJsPlugin({
 		compress: { warnings: false, drop_console: true, unsafe: true }
-	}),
-	// new webpack.optimize.OccurenceOrderPlugin(),
-	// new webpack.ProvidePlugin({
-	// 	Promise: 'imports?this=>global!exports?global.Promise!es6-promise',
-	// 	'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
-	// })
+	})
 ];
 
 function getExtentions () {
