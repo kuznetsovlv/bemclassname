@@ -9,6 +9,10 @@
     "dev": "npm run clear && NODE_ENV=development webpack",
     "test": "node ./test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuznetsovlv/bemclassname.git"
+  },
   "keywords": [
     "HTML",
     "CSS",
