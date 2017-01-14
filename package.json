@@ -6,7 +6,8 @@
   "scripts": {
     "clear": "rm -rf dist",
     "product": "npm run clear && NODE_ENV=product webpack -p",
-    "dev": "npm run clear && NODE_ENV=development webpack",
+    "dev": "NODE_ENV=development webpack",
+    "start": "npm run dev",
     "test": "node ./test"
   },
   "repository": {
