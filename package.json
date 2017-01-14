@@ -4,7 +4,10 @@
   "description": "Creation of HTML/CSS classes for BEM",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clear": "rm -rf dist",
+    "product": "npm run clear && NODE_ENV=product webpack -p",
+    "dev": "npm run clear && NODE_ENV=development webpack",
+    "test": "node ./test"
   },
   "keywords": [
     "HTML",
