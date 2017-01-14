@@ -1,3 +1,1 @@
-const foo = x => x;
-
-export default foo;
+export default from './main';
