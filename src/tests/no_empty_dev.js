@@ -1,5 +1,5 @@
 import {Unit, Test}	from 'unit-kuznetsov';
-import bemClassNames	from '../index';
+import bemClassNames	from 'bemclassnames';
 
 const noEmpty = new Unit (bemClassNames, 'Tests for filtering empty items');
 

@@ -4,11 +4,17 @@
   "description": "Creation of HTML/CSS classes for BEM",
   "main": "dist/index.js",
   "scripts": {
-    "clear": "rm -rf dist",
+    "clear": "rm -rf dist && rm -rf node_modules/bemclassnames",
     "product": "npm run clear && NODE_ENV=product webpack -p",
     "dev": "NODE_ENV=development webpack",
+    "dev-test": "NODE_ENV=test webpack",
     "start": "npm run dev",
-    "test": "node ./test"
+    "test": "node ./test",
+    "prepare": "npm run product",
+    "create": "mkdir -p node_modules/bemclassnames",
+    "copy": "cp -r dist package.json node_modules/bemclassnames",
+    "autoinstall": "npm run prepare && npm run create && npm run copy",
+    "fullTest": "npm run autoinstall && npm run dev-test && npm run test"
   },
   "repository": {
     "type": "git",

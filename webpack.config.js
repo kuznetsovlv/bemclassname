@@ -5,7 +5,7 @@ const path = require('path');
 
 const NODE_ENV = process.env.NODE_ENV || "development";
 const DEV = NODE_ENV === "development";
-
+const TEST = NODE_ENV === "test";
 
 const plugins = [
 	new webpack.NoErrorsPlugin(),
@@ -24,7 +24,7 @@ const productPlugins = [
 function getExtentions () {
 	const extentions = ['', '.js'];
 
-	if (DEV)
+	if (DEV || TEST)
 		extentions.push('_dev.js');
 
 	return extentions;
@@ -33,13 +33,13 @@ function getExtentions () {
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
 
-	entry: DEV ? 'index_dev' : 'index',
+	entry: DEV || TEST ? 'index_dev' : 'index',
 
 	noInfo: true,
 
 	target: 'node',
 
-	output: {filename: 'index.js', path: path.resolve(__dirname, DEV ? 'test' : 'dist'), library: 'unit', libraryTarget: 'umd'},
+	output: {filename: 'index.js', path: path.resolve(__dirname, DEV || TEST ? 'test' : 'dist'), library: 'unit', libraryTarget: 'umd'},
 
 	watch: DEV,
 
