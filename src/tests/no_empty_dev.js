@@ -32,4 +32,24 @@ export default noEmpty
 							],
 							method: 'isEqual',
 							expectation: 'block__element block__element_mod1 block__element_mod2 block__element_mod3'
+						}))
+						.addTest(new Test({
+							args: [
+								'block',
+								'element',
+								''
+							],
+							method: 'isEqual',
+							expectation: 'block__element'
+						}))
+						.addTest(new Test({
+							args: [
+								'block',
+								'element',
+								'mod1',
+								'',
+								{'': true}
+							],
+							method: 'isEqual',
+							expectation: 'block__element block__element_mod1'
 						}));
