@@ -1,9 +1,9 @@
 import {Unit, Test}	from 'unit-kuznetsov';
 import bemClassNames	from '../index';
 
-const testUnit = new Unit (bemClassNames, 'Tests for bemClassNames');
+const base = new Unit (bemClassNames, 'Base tests');
 
-export default testUnit
+export default base
 						.addTest(new Test({args: ['block'], method: 'isEqual', expectation: 'block'}))
 						.addTest(new Test({args: ['BLOCK'], method: 'isEqual', expectation: 'block'}))
 						.addTest(new Test({args: ['block', 'element'], method: 'isEqual', expectation: 'block__element'}))

@@ -1,4 +1,8 @@
-import test	from './tests/test';
+import base	from './tests/base';
+import noEmpty	from './tests/no_empty';
 
-test.drawResult();
+[
+	base,
+	noEmpty
+].forEach(tests => tests.drawResult());
 	
