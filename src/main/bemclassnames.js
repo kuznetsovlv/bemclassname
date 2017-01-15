@@ -1,6 +1,13 @@
 import classNames	from 'classnames';
 import {parseMods}	from '../utils';
 
+/**
+ * Creates BEM's classNames
+ * @param {string} blockName - name of block.
+ * @param {string} [elementName] - name of element.
+ * @param {array of *} [...mods] - modificators.
+ * @returns {string} - BEM's classNames.
+ */
 export default function bemclassnames (blockName, elementName, ...mods) {
 
 	if (!blockName)

@@ -1,3 +1,8 @@
+/**
+ * Parses objects and arrays of modificators.
+ * @param {object or array of *} obj = {} - array of modificators or object with keys named as modificators. In csae of object if !!obj[key] === true, key will be added into modificator's list else will not.
+ * @returns {array of string} - array of parsed modificators.
+ */
 function parseObj (obj = {}) {
 	if (obj instanceof Array)
 		return parseMods(obj);
@@ -17,6 +22,11 @@ function parseObj (obj = {}) {
 	return result;
 }
 
+/**
+ * Parses modificator's array
+ * @param {array of *} mods = [] - array of modificators.
+ * @returns {array of string} - array of parsed modificators.
+ */
 export default function parseMods (mods = []) {
 	let result = [];
 
