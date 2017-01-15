@@ -1,19 +1,22 @@
 import classNames	from 'classnames';
 import {parseMods}	from '../utils';
 
-export default function bemclassnames (block, element, ...mods) {
+export default function bemclassnames (blockName, elementName, ...mods) {
 
-	if (!element)
-		return `${block}`.toLowerCase();
+	if (!blockName)
+		return '';
 
-	const elementClassName = `${block}__${element}`.toLowerCase();
+	if (!elementName)
+		return `${blockName}`.toLowerCase();
+
+	const elementNameClassName = `${blockName}__${elementName}`.toLowerCase();
 
 	if (!mods || !mods.length)
-		return elementClassName;
+		return elementNameClassName;
 
 	const modArr = parseMods(mods);
 
-	const classList = [elementClassName].concat(modArr.map(mod => `${elementClassName}_${mod}`.toLowerCase()));
+	const classList = [elementNameClassName].concat(modArr.map(mod => `${elementNameClassName}_${mod}`.toLowerCase()));
 
 	return classNames.apply({}, classList);
 }
