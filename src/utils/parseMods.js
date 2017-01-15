@@ -5,7 +5,7 @@ function parseObj (obj = {}) {
 	let result = [];
 
 	for(let key in obj) {
-		if (!obj.hasOwnProperty(key) || !obj[key])
+		if (!key || !obj.hasOwnProperty(key) || !obj[key])
 			continue;
 
 		if (typeof obj[key] !== 'object')
@@ -21,6 +21,9 @@ export default function parseMods (mods = []) {
 	let result = [];
 
 	mods.forEach((mod, i) => {
+		if (!mod)
+			return;
+		
 		if (typeof mod !== 'object')
 			result.push(`${mod}`.toLowerCase());
 		else
