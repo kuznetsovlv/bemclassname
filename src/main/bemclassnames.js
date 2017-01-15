@@ -1,5 +1,5 @@
 import classNames	from 'classnames';
-import {parseMods}	from '../utils';
+import {parseMods, unique}	from '../utils';
 
 /**
  * Creates BEM's classNames
@@ -23,7 +23,7 @@ export default function bemclassnames (blockName, elementName, ...mods) {
 
 	const modArr = parseMods(mods);
 
-	const classList = [elementNameClassName].concat(modArr.map(mod => `${elementNameClassName}_${mod}`.toLowerCase()));
+	const classList = [elementNameClassName].concat(unique(modArr.map(mod => `${elementNameClassName}_${mod}`.toLowerCase())));
 
 	return classNames.apply({}, classList);
 }
