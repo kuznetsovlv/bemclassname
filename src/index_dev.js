@@ -1,8 +1,10 @@
 import base	from './tests/base';
 import noEmpty	from './tests/no_empty';
+import unique	from './tests/unique';
 
 [
 	base,
-	noEmpty
+	noEmpty,
+	unique
 ].forEach(tests => tests.drawResult(true));
 	
