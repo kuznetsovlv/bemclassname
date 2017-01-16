@@ -37,7 +37,6 @@
     "webpack": "^1.14.0"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "webpack": "^1.14.0"
+    "classnames": "^2.2.5"
   }
 }
