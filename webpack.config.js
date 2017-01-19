@@ -59,8 +59,7 @@ module.exports = {
 
 	devtool: DEV ? "cheap-source-map" : null,
 
-	plugins: PRODUCT || WEB ? plugins.concat(productPlugins) : plugins,
-	// plugins: plugins,
+	plugins: !DEV ? plugins.concat(productPlugins) : plugins,
 
 	resolve: {
 		modulesDirectories: ['node_modules', 'src'],
