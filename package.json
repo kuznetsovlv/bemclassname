@@ -1,6 +1,6 @@
 {
   "name": "bemclassnames",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Creation of HTML/CSS classes for BEM",
   "main": "dist/index.js",
   "scripts": {
