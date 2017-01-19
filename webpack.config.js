@@ -23,7 +23,7 @@ const plugins = [
 ];
 
 const webOutput = {filename: 'BEMClassNames.js', path: path.resolve(__dirname, 'web'), library: 'BEMClassNames', libraryTarget: 'var'};
-const defaultOutput = {filename: 'index.js', path: path.resolve(__dirname, DEV || TEST  ? 'test' : 'dist')};
+const defaultOutput = {filename: 'index.js', path: path.resolve(__dirname, DEV || TEST  ? 'test' : 'dist'), library: 'BEMClassNames', libraryTarget: 'umd'};
 
 const productPlugins = [
 	new webpack.optimize.UglifyJsPlugin({
