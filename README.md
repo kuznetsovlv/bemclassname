@@ -6,6 +6,7 @@ A simple javascript utility for conditionally creating classNames in BEM notatio
 - [GitHub.](#user-content-github "Link to GitHub repository")
 - [Install.](#user-content-install "Install")
 - [Usage.](#user-content-usege "Usage")
+- [Support.](#user-content-support "Supported brousers")
 - [License](#user-content-license "License")
 
 ##GitHub.
@@ -38,6 +39,9 @@ The `BEMClassNames` function takes any number of arguments which can be a string
 	BEMClassNames('blockName', 'elementName', 'mod1', {mod1: false, mod2: true}, ['mod2', 'mod3', {mod4: true}]); // => 'blockName__elementName blockName__elementName_mod1 blockName__elementName_mod2 blockName__elementName_mod3 blockName__elementName_mod4'
 	BEMClassNames('blockName', 'elementName', {mod1: false}, 'mod1'); // => 'blockName__elementName blockName__elementName_mod1'
 ```
+
+##Support.
+Supported browsers _IE9+_.
 
 ##License
 [MIT](./LICENSE "MIT") Copyright (c) 2017 Kuznetsov Leonid.
