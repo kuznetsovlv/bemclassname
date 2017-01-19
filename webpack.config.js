@@ -39,7 +39,7 @@ module.exports = {
 
 	target: 'node',
 
-	output: {filename: 'index.js', path: path.resolve(__dirname, DEV || TEST ? 'test' : 'dist'), library: 'BEMClassNames', libraryTarget: 'umd'},
+	output: {filename: 'index.js', path: path.resolve(__dirname, DEV || TEST  ? 'test' : 'dist'), library: 'BEMClassNames', libraryTarget: 'var'},
 
 	watch: DEV,
 
