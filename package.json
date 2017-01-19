@@ -4,9 +4,11 @@
   "description": "Creation of HTML/CSS classes for BEM",
   "main": "dist/index.js",
   "scripts": {
-    "clear": "rm -rf dist",
-    "product": "npm run clear && NODE_ENV=product webpack -p",
+    "clear": "rm -rf dist && rm web/BEMClassNames.js",
+    "product": "NODE_ENV=product webpack -p",
     "dev": "NODE_ENV=development webpack",
+    "web": "NODE_ENV=web webpack -p",
+    "build": "npm run clear && npm run product && npm run web", 
     "start": "npm run dev",
     "test": "node ./test"
   },
