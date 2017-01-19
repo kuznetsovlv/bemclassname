@@ -1,6 +1,6 @@
 {
   "name": "bemclassnames",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Creation of HTML/CSS classes for BEM",
   "main": "dist/index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "BEM"
   ],
   "author": "Kuznetsov Leonid",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
@@ -43,7 +43,5 @@
     "webpack": "^1.14.0"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "webpack": "^1.14.0"
   }
 }
