@@ -18,6 +18,8 @@ npm install bemclassnames --save-dev
 ##Usage.
 The `BEMClassNames` function takes any number of arguments which can be a string, object or array. The argument `blockName` must be a string is a block's name, `elementName` string optional argument is the block's element's name. All other optional elements may be any of a string, object or array and defines set of modificators. In case of object if it's key s falsy, it won't be included in the output. Dublicated or falsy modificators won't be included in the output too.
 ```javascript
+	import BEMclassnames from 'bemclassnames';
+	
 	BEMClassNames(''); // => ''
 	BEMClassNames('blockName'); // => 'blockName'
 	BEMClassNames('blockName', ''); // => 'blockName'
